@@ -77,7 +77,7 @@ export default function App() {
   };
 
   const buttonToglee = length => {
-    if (length >= 12) {
+    if (length >= 4) {
       return setButtonTogle(true);
     }
       return setButtonTogle(false);
@@ -90,10 +90,10 @@ export default function App() {
       {img.length !== 0 && <ImageGallery data={img} onImageClick={openModal} />}
 
       {isLoading && <Loader />}
-      {img.length !== totalImage && buttonTogle && (
+      {img.length !== totalImage && buttonTogle && !isLoading && (
         <Button onLoadMore={onLoadMore} />
       )}
-      {isModal && <Modal onModalClose={modalClose} image={currenPreview} />}
+        {isModal && <Modal onModalClose={modalClose} image={currenPreview} />}
     </>
   );
 }
