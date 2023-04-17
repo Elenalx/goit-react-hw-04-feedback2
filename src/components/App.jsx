@@ -6,7 +6,7 @@ import  Searchbar from './Searchbar/Searchbar';
 import { Loader } from './Loader/Loader';
 import { ImageGallery } from './ImageGallery/ImageGallery';
 import { Button } from './Button/Button';
-import { Modal } from './Modal/Modal';
+import  Modal  from './Modal/Modal';
 import { galleryApi } from 'services/gallery-api';
 
 // import css from './app-module.css';
@@ -80,7 +80,7 @@ export default function App() {
     if (length >= 12) {
       return setButtonTogle(true);
     }
-    return setButtonTogle(false);
+      return setButtonTogle(false);
   };
 
   return (
